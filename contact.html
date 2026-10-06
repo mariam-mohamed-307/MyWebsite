@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/Stylesheet.css">
+</head>
+
+<body>
+
+```
+<header>
+    <h1>My Blog</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Contact Us</h2>
+
+    <p>Please fill out the form below.</p>
+
+    <form action="#" method="POST">
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone" required>
+
+        <br><br>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date">
+
+        <br><br>
+
+        <label for="topic">Choose a Topic:</label>
+        <select id="topic" name="topic">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="general">General</option>
+        </select>
+
+        <br><br>
+
+        <fieldset>
+            <legend>Preferred Contact Method:</legend>
+
+            <input type="radio" id="emailContact" name="contactMethod" value="email">
+            <label for="emailContact">Email</label>
+
+            <input type="radio" id="phoneContact" name="contactMethod" value="phone">
+            <label for="phoneContact">Phone</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>What are you interested in?</legend>
+
+            <input type="checkbox" id="htmlInterest" name="interest" value="html">
+            <label for="htmlInterest">HTML</label>
+
+            <input type="checkbox" id="cssInterest" name="interest" value="css">
+            <label for="cssInterest">CSS</label>
+
+            <input type="checkbox" id="webInterest" name="interest" value="web">
+            <label for="webInterest">Web Development</label>
+        </fieldset>
+
+        <br>
+
+        <label for="message">Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 My Blog</p>
+</footer>
+```
+
+</body>
+</html>

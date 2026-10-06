@@ -1,0 +1,42 @@
+h1 {
+color: rgb(0, 255, 255);
+width: 100%;
+text-align: center;
+}
+
+body {
+background-color: rgb(59, 46, 33);
+color: aliceblue;
+}
+
+nav {
+text-align: center;
+}
+
+nav a {
+color: aliceblue;
+margin: 10px;
+}
+
+main {
+width: 80%;
+margin: auto;
+}
+
+input, select, textarea {
+margin-top: 5px;
+padding: 5px;
+}
+
+fieldset {
+margin-top: 15px;
+}
+
+button {
+padding: 8px 15px;
+}
+
+footer {
+text-align: center;
+margin-top: 30px;
+}
