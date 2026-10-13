@@ -1,104 +1,167 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <meta name="description" content="Contact My Blog using the accessible contact form.">
+    <title>My Blog | Contact</title>
     <link rel="stylesheet" href="css/Stylesheet.css">
 </head>
-
 <body>
 
-```
-<header>
-    <h1>My Blog</h1>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="site-logo" href="index.html">My Blog</a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<main>
-    <h2>Contact Us</h2>
+    <main>
+        <section class="page-intro">
+            <h1>Contact Us</h1>
+            <p>Fill out the form below to get in touch with us.</p>
+        </section>
 
-    <p>Please fill out the form below.</p>
+        <section class="section">
+            <div class="card">
+                <form action="#" method="get">
 
-    <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="fullName"
+                            autocomplete="name"
+                            required>
+                    </div>
 
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required>
+                    </div>
 
-        <br><br>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            autocomplete="tel"
+                            inputmode="tel"
+                            required>
+                    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                    <div class="form-group">
+                        <label for="preferred-date">Preferred Date</label>
+                        <input
+                            type="date"
+                            id="preferred-date"
+                            name="preferredDate">
+                    </div>
 
-        <br><br>
+                    <div class="form-group">
+                        <label for="topic">Topic</label>
+                        <select id="topic" name="topic">
+                            <option value="">Select a topic</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="general">General</option>
+                        </select>
+                    </div>
 
-        <label for="phone">Phone Number:</label>
-        <input type="number" id="phone" name="phone" required>
+                    <fieldset>
+                        <legend>Preferred Contact Method</legend>
 
-        <br><br>
+                        <div class="choice-group">
+                            <label class="choice" for="contact-email">
+                                <input
+                                    type="radio"
+                                    id="contact-email"
+                                    name="contactMethod"
+                                    value="email"
+                                    checked>
+                                Email
+                            </label>
 
-        <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date">
+                            <label class="choice" for="contact-phone">
+                                <input
+                                    type="radio"
+                                    id="contact-phone"
+                                    name="contactMethod"
+                                    value="phone">
+                                Phone
+                            </label>
+                        </div>
+                    </fieldset>
 
-        <br><br>
+                    <fieldset>
+                        <legend>Areas of Interest</legend>
 
-        <label for="topic">Choose a Topic:</label>
-        <select id="topic" name="topic">
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="general">General</option>
-        </select>
+                        <div class="choice-group">
+                            <label class="choice" for="interest-html">
+                                <input
+                                    type="checkbox"
+                                    id="interest-html"
+                                    name="interests"
+                                    value="html">
+                                HTML
+                            </label>
 
-        <br><br>
+                            <label class="choice" for="interest-css">
+                                <input
+                                    type="checkbox"
+                                    id="interest-css"
+                                    name="interests"
+                                    value="css">
+                                CSS
+                            </label>
 
-        <fieldset>
-            <legend>Preferred Contact Method:</legend>
+                            <label class="choice" for="interest-web">
+                                <input
+                                    type="checkbox"
+                                    id="interest-web"
+                                    name="interests"
+                                    value="web-development">
+                                Web Development
+                            </label>
+                        </div>
+                    </fieldset>
 
-            <input type="radio" id="emailContact" name="contactMethod" value="email">
-            <label for="emailContact">Email</label>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            required></textarea>
+                    </div>
 
-            <input type="radio" id="phoneContact" name="contactMethod" value="phone">
-            <label for="phoneContact">Phone</label>
-        </fieldset>
+                    <p class="help-text">Fields marked with * are required.</p>
 
-        <br>
+                    <button type="submit">Send Message</button>
+                    <button type="reset" class="btn-outline">Clear Form</button>
 
-        <fieldset>
-            <legend>What are you interested in?</legend>
+                </form>
+            </div>
+        </section>
+    </main>
 
-            <input type="checkbox" id="htmlInterest" name="interest" value="html">
-            <label for="htmlInterest">HTML</label>
-
-            <input type="checkbox" id="cssInterest" name="interest" value="css">
-            <label for="cssInterest">CSS</label>
-
-            <input type="checkbox" id="webInterest" name="interest" value="web">
-            <label for="webInterest">Web Development</label>
-        </fieldset>
-
-        <br>
-
-        <label for="message">Message:</label>
-        <br>
-        <textarea id="message" name="message" rows="6" cols="40" required></textarea>
-
-        <br><br>
-
-        <button type="submit">Send Message</button>
-
-    </form>
-</main>
-
-<footer>
-    <p>&copy; 2026 My Blog</p>
-</footer>
-```
+    <footer>
+        <p>&copy; 2026 My Blog. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

@@ -1,47 +1,109 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <meta name="description" content="Learn about the purpose of My Blog and its web development topics.">
+    <title>My Blog | About</title>
     <link rel="stylesheet" href="css/Stylesheet.css">
 </head>
-
 <body>
 
-```
-<header>
-    <h1>My Blog</h1>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="site-logo" href="index.html">My Blog</a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<main>
-    <section>
-        <h2>Latest Posts</h2>
+    <main>
+        <section class="page-intro">
+            <h1>About My Blog</h1>
+            <p>This blog shares information about web development, HTML, CSS, and my learning journey.</p>
+        </section>
 
-        <article>
-            <h3>Learning HTML</h3>
-            <p>HTML is the foundation of every website.</p>
-        </article>
+        <section class="section" aria-labelledby="posts-heading">
+            <h2 id="posts-heading">Latest Posts</h2>
 
-        <article>
-            <h3>Why CSS Matters</h3>
-            <p>CSS makes pages look great.</p>
-        </article>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Learning HTML</h3>
+                    <p>HTML helps us organize website content using headings, paragraphs, links, images, and forms.</p>
+                </article>
 
-    </section>
-</main>
+                <article class="card">
+                    <h3>Why CSS Matters</h3>
+                    <p>CSS controls colors, spacing, typography, and page layouts to make websites easier to use.</p>
+                </article>
 
-<footer>
-    <p>&copy; 2026 My Blog</p>
-</footer>
-```
+                <article class="card">
+                    <h3>Responsive Websites</h3>
+                    <p>Responsive design allows the layout to adapt to different screen sizes.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="components-heading">
+            <h2 id="components-heading">Component Library</h2>
+
+            <div class="alert" role="status">
+                <strong>Success!</strong>
+                This is an example of an alert notification created with CSS.
+            </div>
+
+            <div class="card">
+                <h3>Buttons</h3>
+                <p>These buttons demonstrate the default and outlined button styles.</p>
+
+                <p>
+                    <a class="btn" href="contact.html">Contact Us</a>
+                    <a class="btn btn-outline" href="index.html">Back to Home</a>
+                </p>
+
+                <p>
+                    <button type="button" disabled>Disabled Button</button>
+                </p>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="modal-heading">
+            <h2 id="modal-heading">Modal Window</h2>
+            <p>Click the button below to open a modal window. It uses CSS only, with no JavaScript.</p>
+
+            <a class="btn" href="#info-modal">Open Modal</a>
+
+            <div id="info-modal" class="modal-overlay">
+                <section class="modal-dialog"
+                         role="dialog"
+                         aria-modal="true"
+                         aria-labelledby="modal-title"
+                         aria-describedby="modal-description">
+
+                    <h2 id="modal-title">Welcome to My Blog</h2>
+
+                    <p id="modal-description">
+                        This is a CSS-only modal window. You can close it using the close link below
+                        or the Escape key by navigating away from the modal with your browser controls.
+                    </p>
+
+                    <div class="modal-actions">
+                        <a class="btn" href="#modal-heading">Close Modal</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Blog. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

@@ -1,64 +1,88 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <meta name="description" content="Mariam Mohamed's personal blog and learning portfolio.">
+    <title>My Blog | Home</title>
     <link rel="stylesheet" href="css/Stylesheet.css">
 </head>
-
 <body>
 
-```
-<header>
-    <h1>My Blog</h1>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="site-logo" href="index.html">My Blog</a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<main>
-<h2>I am Mariam Mohamed</h2>
-    <h3>My Skills</h3>
+    <main>
+        <section class="page-intro">
+            <h1>I am Mariam Mohamed</h1>
+            <p>Welcome to my blog and learning portfolio. Here you can learn about my skills and courses.</p>
+        </section>
 
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-    </ul>
+        <section class="section" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">My Skills</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Course</th>
-                <th>Day</th>
-                <th>Room</th>
-            </tr>
-        </thead>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>I use HTML to structure web pages with headings, paragraphs, links, forms, and tables.</p>
+                </article>
 
-        <tbody>
-            <tr>
-                <td>Web Basics</td>
-                <td>Monday</td>
-                <td>B12</td>
-            </tr>
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>I use CSS to style pages, organize layouts, and create responsive designs.</p>
+                </article>
 
-            <tr>
-                <td>DataBases</td>
-                <td>Tuesday</td>
-                <td>C03</td>
-            </tr>
-        </tbody>
-    </table>
-</main>
+                <article class="card">
+                    <h3>Responsive Design</h3>
+                    <p>I practice making websites work on mobile phones, tablets, and desktop screens.</p>
+                </article>
+            </div>
+        </section>
 
-<footer>
-    <p>&copy; 2026 My Blog</p>
-</footer>
-```
+        <section class="section" aria-labelledby="courses-heading">
+            <h2 id="courses-heading">My Courses</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <caption>Course schedule</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Course</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Basics</td>
+                            <td>Monday</td>
+                            <td>B12</td>
+                        </tr>
+                        <tr>
+                            <td>DataBases</td>
+                            <td>Tuesday</td>
+                            <td>C03</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Blog. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
